@@ -1,0 +1,74 @@
+body
+{
+background-image: url('background-image.jpg');
+background-repeat: repeat;
+font-family:Segoe UI;
+}
+
+
+.a1{
+    font-family: 'Segoe UI';
+    font-size: 10rem;
+    padding-left: 200px;
+    padding-top:100px;
+    font-weight: bold;
+    border: 8px solid black;
+    text-align: center;
+    color: #2EA466;
+}
+
+.a2
+{
+    font-family: 'Arial';
+    font-size: 8rem;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right:50px;
+    text-align: justify;
+    cursor: help;
+    
+}
+
+
+.a3
+{
+    font-size : 7rem;
+    padding-top:50px;
+}
+
+.a4 {
+    font-size: 7rem;
+    padding-top: 50px;
+    z-index:1;
+    position: absolute;
+    top:1800px;
+    left:200px;
+    color: red;
+    font-weight:bold;
+}
+
+.a5 {
+    font-size: 7rem;
+    padding-top: 50px;
+    z-index:0;
+    position: absolute;
+    top:1800px;
+    left:200px;
+}
+
+a:hover
+{
+  color: red;
+ 
+}
+
+a:active 
+{
+    color : green;
+}
+
+a:visited
+{
+    color:violet;
+}
+
