@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+</head>
+
+<body>
+    <form onsubmit="validate()">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Name" required />
+        <br><br>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" required />
+        <br><br>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="email" required />
+        <br><br>
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="phone" required />
+        <br><br>
+        <p>Gender</p>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="html">Male</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="css">Female</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="javascript">Other</label>
+        <br><br>
+
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+
+
+    <script>
+        function validate() {
+            var name = document.getElementById("name");
+            var password = document.getElementById("password");
+            var email = document.getElementById("email");
+            var phone = document.getElementById("phone");
+            var flag = 1;
+            if (!(/[a-zA-Z\s]+/.test(name))) {
+                flag = 0;
+                console.log("name rejected");
+            }
+            if (!(/\w{7,14}/.test(password))) {
+                flag = 0;
+                console.log("password rejected");
+            }
+            if (flag === 1) {
+                console.log("data accepted");
+            }
+            else {
+                console.log("data rejected. check the data again.");
+            }
+        }
+    </script>
+</body>
+
+</html>
