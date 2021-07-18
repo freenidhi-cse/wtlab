@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <style type="text/css">
+        form{
+            
+            width : 450px;
+            text-align: center;
+            margin : 30px auto;
+            
+        }
+        td{
+            padding: 10px;
+        }
+        td:first-child
+        {
+            text-align:right;
+            font-weight: bold;
+        }
+        input[type="text"]
+        {
+            width:250px;
+        }
+        input[type="submit"]
+        {
+            height:30px;
+        }
+
+        </style>
+        <script>
+            function validate()
+            {
+                var name=document.stud_form.name;
+                var password=document.stud_form.password;
+                var email=document.stud_form.email;
+                var number=document.stud_form.number;
+                var gender=document.stud_form.gender;
+                var language=document.stud_form.language;
+                if(name.value.length<=0)
+                {
+                    alert("name is required");
+                    name.focus();
+                    return false;
+                }
+                if(password.value.length<=0)
+                {
+                    alert("password is required");
+                    password.focus();
+                    return false;
+                }
+                if(email.value.length<=0)
+                {
+                    alert("email is required");
+                    email.focus();
+                    return false;
+                }
+                if(number.value.length<=0)
+                {
+                    alert("number is required");
+                    number.focus();
+                    return false;
+                }
+                if(gender.value.length<=0)
+                {
+                    alert("gender is required");
+                    gender.focus();
+                    return false;
+                }
+                
+
+                
+            }
+            function validateString(id)
+            {
+                var element= document.getElementById(id);
+                var Regex =/^[a-zA-Z ]+$/;
+                if(!Regex.test(element.value))
+                {
+                    alert("enter string name");
+                    element.style.border="2px solid red";
+                    return false;
+                }
+                
+                element.style.border="2px solid green";
+
+            }
+            function validateNumber(id)
+            {
+                var element= document.getElementById(id);
+                var Regex =/^[0-9]{10}$/;
+                if(!Regex.test(element.value))
+                {
+                    alert("enter  10 digit number");
+                    element.style.border="2px solid red";
+                    return false;
+                }
+                
+                element.style.border="2px solid green";
+
+            }
+            function validateEmail(id)
+            {
+                var element= document.getElementById(id);
+                var Regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{3}$/;
+                if(!Regex.test(element.value))
+                {
+                    alert("enter  valid email");
+                    element.style.border="2px solid red";
+                    return false;
+                }
+                
+                element.style.border="2px solid green";
+
+            }
+        </script>
+        
+    </head>
+    <body>
+        <form method="" action="" name="stud_form" onsubmit="return validate()">
+       <center><h2> Registration form</h2></center>
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td>
+                    <input type="text" name="name" id="name" onblur="validateString(this.id)">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td>
+                    <input type="text" name="email" id="email" onblur="validateEmail(this.id)">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Number</label></td>
+                <td>
+                    <input type="text" name="number" id="number" onblur="validateNumber(this.id)" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="male">male
+                    <input type="radio" name="gender" value="female">female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Languages:</label></td>
+                <td>
+                    <input type="checkbox" name="language" value="telugu">telugu
+                    <input type="checkbox" name="language" value="hindi">hindi
+                    <input type="checkbox" name="language" value="english">english
+                    <input type="checkbox" name="language" value="tamil">tamil
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <input type="submit" name="submit" value="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>
