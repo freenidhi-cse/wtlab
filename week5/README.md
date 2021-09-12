@@ -9,6 +9,10 @@
 
 ## Deploying XSL Files on your device 
 
+#### 1. Put all of these files in the same folder, and open the .xml file in Internet Explorer.
+
+#### 2. If you do not have IE/ the above approach doesn't work :
+
 Unlike HTML/CSS files, we cannot open XML files formatted with XSLT ( .xsl files ) directly in a browser because of local file display errors raised by browsers. Hence, this cannot be done with browsers like Chrome/Edge/Firefox, but can be opened with old versions of Internet Explorer. Hosting the .xsl file online also doesn't seem to work. So, the **best** solution, yet lengthy ( on Chrome ) - 
 
 1. Download the .xml and .xsl files listed here and add them to the same folder. Note the location of this folder.
