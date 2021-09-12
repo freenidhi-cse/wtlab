@@ -1,0 +1,44 @@
+<web-app>
+    <servlet>
+        <servlet-name>NiceServlet</servlet-name>
+        <servlet-class>NiceServlet</servlet-class>
+
+        <init-param>
+            <param-name>username1</param-name>
+            <param-value>us1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password1</param-name>
+            <param-value>pw1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username2</param-name>
+            <param-value>us2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password2</param-name>
+            <param-value>pw2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username3</param-name>
+            <param-value>us3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password3</param-name>
+            <param-value>pw3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username4</param-name>
+            <param-value>us4</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password4</param-name>
+            <param-value>pw4</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NiceServlet</servlet-name>
+        <url-pattern>/NiceServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
